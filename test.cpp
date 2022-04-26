@@ -22,7 +22,7 @@ public:
             temp = NULL;
         }
     }
- 
+    //hàm them phan tu
     void AddValue(int val)  
     {
         Node* new_node = new Node();
@@ -30,6 +30,7 @@ public:
         new_node->p_next_ = p_head_;
         p_head_ = new_node;
     }
+    //ham xoa
     void Remove()  
     {
     	/*for(Node* temp=p_head_;p_head_!=NULL;temp=temp->p_next_){
@@ -45,6 +46,7 @@ public:
             delete temp;
         }
     }
+    //ham sap xep
     void SortList()
     {
     	for(Node* temp=p_head_;temp!=NULL;temp=temp->p_next_)
@@ -61,7 +63,7 @@ public:
 			}
     	}
     }
-    
+    //ham hien thi
     void Show()  
     {
         Node* temp = p_head_;
@@ -73,7 +75,7 @@ public:
         }
     }
 private:
-    Node* p_head_;   
+    Node* p_head_;   //con tro quan ly phan tu dau
 }; 
 
 int main()
@@ -86,10 +88,9 @@ int main()
     data_list.AddValue(9);
  
     data_list.Show();
- 
-    data_list.SortList();
- 
+
     std::cout << std::endl;
+    
     data_list.Show();
  
     return 0;
